@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Calculator</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="index.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Virtual Memory Calculator</h1>
+    </header>
+    <main>
+        <section>
+            <div class="flex-container">
+                <div class="one">
+
+                    <h2>Calculate the max number of pages that can be addressed by a virtual address</h2>
+
+                    <form onsubmit="return formSubmission1()" id="one">
+                        <label for="page_size">Page Size</label>
+                        <input type="text" name="page_size" id="page_size" required>
+                        
+                        <label class="toggle-switch">
+                            <input type="radio" name="size_toggle" value="KB" id="kb_toggle1" checked>
+                            <span class="toggle-label">KB</span>
+                        </label>
+                        <label class="toggle-switch">
+                            <input type="radio" name="size_toggle" value="MB" id="mb_toggle1">
+                            <span class="toggle-label">MB</span>
+                        </label>                        
+                        <br>
+
+                        <label for="address" style="display: block;">Virtual Address Size<br><i>Default: 32 bit, i.e, 4 GB</i></label>
+                        <input type="text" name="address" id="address" value="4000000000">
+
+                        <input type="submit" value="Calculate">
+
+                    </form>
+
+                    <div class="results" id="result1">
+                        
+                    </div>
+
+                </div>
+
+                <br>
+                
+                <div class="three">
+
+                    <h2>Calculate the number of pages that can be stored in physical memory</h2>
+
+                    <form onsubmit="return formSubmission3()" id="three">
+                        <label for="physical">Physical Memory Size</label>
+                        <input type="text" name="physical" id="physical" placeholder="in GB" required>
+
+                        <br>
+                        <br>
+
+                        <label for="pagesize">Page Size</label>
+                        <input type="text" name="page_size" id="pagesize" required>
+                        <label class="toggle-switch">
+                            <input type="radio" name="size_toggle" value="KB" id="kb_toggle2" checked>
+                            <span class="toggle-label">KB</span>
+                        </label>
+                        <label class="toggle-switch">
+                            <input type="radio" name="size_toggle" value="MB" id="mb_toggle2">
+                            <span class="toggle-label">MB</span>
+                        </label> 
+
+                        <br>
+                        <input type="submit" value="Calculate">
+                    </form>
+
+                    <div class="results" id="result3">
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <h3>Made by Dhureen Shettigar</h3>
+    </footer>
+</body>
+</html>
